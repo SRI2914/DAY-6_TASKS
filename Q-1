@@ -1,0 +1,98 @@
+QUESTION-1(A):--
+
+class movie{
+    title='';
+    studio='';
+    rating='';
+    //constructor that takes title,studio and rating as string.
+    constructor(title,studio,rating){
+    //setting class propertis to the value
+        this.title = title;
+        this.studio =studio;
+        this.rating = rating;
+    }
+}
+
+
+QUESTION-1(B):--
+
+class movie{
+    title='';
+    studio='';
+    rating='';
+    //setting the default value for rating as PG
+    constructor(title,studio,rating='PG'){
+        this.title = title;
+        this.studio =studio;
+        this.rating = rating;
+    }
+}
+
+QUESTION-1(C):--
+
+class movie{
+    title='';
+    studio='';
+    rating='';
+    constructor(title,studio,rating='PG'){
+        this.title = title;
+        this.studio =studio;
+        this.rating = rating;
+    }
+
+    getPG(arr1,arr2){
+        for(let i=0; i<data.length; i++){
+            if(arr1[i].rating == 'PG'){
+                arr2.push(data[i]);
+            }
+        }
+        return console.log(arr2);
+    }
+}
+
+//Object creation with movie name, with production house name & with some rating
+const Casinoroyale = new movie('CasinoRoyale','Eon production',rating='PG13');
+
+const Avengers = new movie('Avengers','marble',rating='PG');
+
+const Drishyam = new movie('Drishyam','Dharma',rating='PG');
+
+const RRR = new movie('RRR','Red chilli entertainment',rating='PG14');
+
+const Avatar = new movie('Avatar','cameron production',rating='PG');
+
+let data=[];
+data.push(Casinoroyale);
+data.push(Avengers);
+data.push(Drishyam);
+data.push(RRR);
+data.push(Avatar);
+
+let arr=[];
+
+Avengers.getPG(data,arr);
+
+QUESTION-1(D):--
+
+class movie{
+    title='';
+    studio='';
+    rating='';
+    constructor(title,studio,rating='PG'){
+        this.title = title;
+        this.studio =studio;
+        this.rating = rating;
+    }
+
+    getPG(arr1,arr2){
+        for(let i=0; i<data.length; i++){
+            if(arr1[i].rating == 'PG'){
+                arr2.push(data[i]);
+            }
+        }
+        return console.log(arr2);
+    }
+}
+
+//Object creation with movie name AS 'CasinoRoyale', with production house name AS 'Eon Production' & with rating AS 'PG13'
+const Casinoroyale = new movie('CasinoRoyale','Eon production',rating='PG13');
