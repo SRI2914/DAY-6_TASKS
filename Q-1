@@ -83,15 +83,6 @@ class movie{
         this.studio =studio;
         this.rating = rating;
     }
-
-    getPG(arr1,arr2){
-        for(let i=0; i<data.length; i++){
-            if(arr1[i].rating == 'PG'){
-                arr2.push(data[i]);
-            }
-        }
-        return console.log(arr2);
-    }
 }
 
 //Object creation with movie name AS 'CasinoRoyale', with production house name AS 'Eon Production' & with rating AS 'PG13'
