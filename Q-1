@@ -78,7 +78,7 @@ class movie{
     title='';
     studio='';
     rating='';
-    constructor(title,studio,rating='PG'){
+    constructor(title,studio,rating){
         this.title = title;
         this.studio =studio;
         this.rating = rating;
@@ -86,4 +86,4 @@ class movie{
 }
 
 //Object creation with movie name AS 'CasinoRoyale', with production house name AS 'Eon Production' & with rating AS 'PG13'
-const Casinoroyale = new movie('CasinoRoyale','Eon production',rating='PG13');
+const Casinoroyale = new movie('Casino Royale','Eon productions',rating='PG13');
