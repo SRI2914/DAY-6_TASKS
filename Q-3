@@ -1,0 +1,37 @@
+class person{
+    static company_name='IBM';
+
+    constructor(name,age,email,address){
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.address = address;
+    }
+
+    //Object level method =Instance method
+
+    getData(){
+        let personData = `
+        Name: ${this.name}
+        Age: ${this.age}
+        Email: ${this.email}
+        Address: ${this.address}
+        `;
+
+        console.log(personData);
+    }
+
+    //static method
+
+    static getCompanyName(){
+        console.log(person.company_name);
+    }
+}
+
+//Creating object for person class
+let person1= new person("John",30,"John@gmail.com","123 Main Street");
+let person2= new person("wilson",32,"wilson@gmail.com","122 Main Street");
+let person3= new person("sri",23,"sri@gmail.com","124 Main Street");
+let person4= new person("james",35,"james@gmail.com","125 Main Street");
+person1.getData();
+person.getCompanyName();
