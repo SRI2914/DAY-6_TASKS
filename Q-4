@@ -1,0 +1,40 @@
+class uber{
+    waiting_time;
+    traffic_waiting_time;
+    expected_price;
+    picup_ocation;
+    drop_location;
+    total_distance;
+    charges_per_km;
+    waiting_charge_permin;
+    constructor(waiting_time,traffic_waiting_time,picup_ocation,drop_location,total_distance,charges_per_km,waiting_charge_permin){
+        this.waiting_time = waiting_time;
+        this.traffic_waiting_time = traffic_waiting_time;
+        this.picup_ocation = picup_ocation;
+        this.drop_location = drop_location;
+        this.total_distance = total_distance;
+        this.charges_per_km = charges_per_km;
+        this.waiting_charge_permin = waiting_charge_permin;
+    }
+
+    getFare(){
+        let result;
+        if(this.waiting_time && this.traffic_waiting_time > 0){
+            result= (this.waiting_time*this.waiting_charge_permin)+(this.total_distance*this.charges_per_km)+(this.traffic_waiting_time*this.waiting_charge_permin);
+        }
+
+        else{
+            result=(this.total_distance*this.charges_per_km);
+        }
+
+        return result;
+
+            
+    }
+}
+
+let fare=new uber(10,10,"noida","gr.noida",50,8,6);
+console.log(fare.getFare());//Output:520
+
+let fare=new uber(0,0,"noida","gr.noida",50,8,6);
+console.log(fare.getFare()); //Output: 400
